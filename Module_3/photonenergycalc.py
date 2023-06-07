@@ -6,8 +6,13 @@ def photon_energy(wavelength):
     """calculate photon energy in SI"""
     return h_Planck * c_light / wavelength
 
+# input
 wavelength_nm = float(input("Enter wavelength in nm -> "))
 wavelength = wavelength_nm * 1e-9
+
+# calculation
 energy = photon_energy(wavelength)
+
+# output
 energy_eV = energy / e_electron
 print(f"Photon with wavelength {wavelength_nm:g} nm has energy {energy_eV:g} eV")
